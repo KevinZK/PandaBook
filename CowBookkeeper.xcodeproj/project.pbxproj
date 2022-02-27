@@ -1,0 +1,487 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A10C3CE27B81BE40073F359 /* CBTestPr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A10C3CD27B81BE40073F359 /* CBTestPr.swift */; };
+		0A1FB15627C8F753005486CB /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FB15527C8F753005486CB /* Font.swift */; };
+		0A1FB15B27C9F747005486CB /* RecordDeploy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FB15A27C9F747005486CB /* RecordDeploy.swift */; };
+		0A1FB15D27C9FC3A005486CB /* AppCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FB15C27C9FC3A005486CB /* AppCommon.swift */; };
+		0A59CA8B271EBC1300199F53 /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A59CA8A271EBC1300199F53 /* MainTab.swift */; };
+		0A59CA8D271EBF7400199F53 /* SettingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A59CA8C271EBF7400199F53 /* SettingRootView.swift */; };
+		0A6F386B27C22C1C006F60B5 /* RecordPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F386A27C22C1C006F60B5 /* RecordPalette.swift */; };
+		0A6F386F27C3C56A006F60B5 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F386E27C3C56A006F60B5 /* View.swift */; };
+		0A6F387327C3C669006F60B5 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F387227C3C669006F60B5 /* Keyboard.swift */; };
+		0A6F387627C66272006F60B5 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F387527C66272006F60B5 /* Animations.swift */; };
+		0A6F387827C66542006F60B5 /* ButtonAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F387727C66542006F60B5 /* ButtonAnimation.swift */; };
+		0A6F387A27C7AA8F006F60B5 /* AppDeploy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F387927C7AA8F006F60B5 /* AppDeploy.swift */; };
+		0A6F387C27C7C36E006F60B5 /* CommandButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F387B27C7C36E006F60B5 /* CommandButton.swift */; };
+		0A7F9A1927BD4D88004FB2FF /* CBRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F9A1827BD4D88004FB2FF /* CBRecordView.swift */; };
+		0A99220F2718029600960A7A /* CowBookkeeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A99220E2718029600960A7A /* CowBookkeeperApp.swift */; };
+		0A9922112718029600960A7A /* HomeRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9922102718029600960A7A /* HomeRootView.swift */; };
+		0A9922132718029900960A7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A9922122718029900960A7A /* Assets.xcassets */; };
+		0A9922162718029900960A7A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A9922152718029900960A7A /* Preview Assets.xcassets */; };
+		0AB395BC27B3F984007982B4 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 0AB395BB27B3F984007982B4 /* SwiftUICharts */; };
+		0ABE381727B2047D00733F78 /* CBFirstUseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE381627B2047D00733F78 /* CBFirstUseView.swift */; };
+		0ABE381A27B20D0700733F78 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE381927B20D0700733F78 /* Color.swift */; };
+		0ABE381C27B227FF00733F78 /* CBHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ABE381B27B227FE00733F78 /* CBHomeView.swift */; };
+		0AE6008D27BCC9FF005C7FC1 /* AssetsRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE6008C27BCC9FF005C7FC1 /* AssetsRecords.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0A10C3CD27B81BE40073F359 /* CBTestPr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBTestPr.swift; sourceTree = "<group>"; };
+		0A1FB15527C8F753005486CB /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
+		0A1FB15A27C9F747005486CB /* RecordDeploy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDeploy.swift; sourceTree = "<group>"; };
+		0A1FB15C27C9FC3A005486CB /* AppCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommon.swift; sourceTree = "<group>"; };
+		0A59CA8A271EBC1300199F53 /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
+		0A59CA8C271EBF7400199F53 /* SettingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRootView.swift; sourceTree = "<group>"; };
+		0A6F386A27C22C1C006F60B5 /* RecordPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPalette.swift; sourceTree = "<group>"; };
+		0A6F386E27C3C56A006F60B5 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		0A6F387227C3C669006F60B5 /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		0A6F387527C66272006F60B5 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		0A6F387727C66542006F60B5 /* ButtonAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimation.swift; sourceTree = "<group>"; };
+		0A6F387927C7AA8F006F60B5 /* AppDeploy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDeploy.swift; sourceTree = "<group>"; };
+		0A6F387B27C7C36E006F60B5 /* CommandButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandButton.swift; sourceTree = "<group>"; };
+		0A7F9A1827BD4D88004FB2FF /* CBRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBRecordView.swift; sourceTree = "<group>"; };
+		0A99220B2718029600960A7A /* Panda记账.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Panda记账.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A99220E2718029600960A7A /* CowBookkeeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CowBookkeeperApp.swift; sourceTree = "<group>"; };
+		0A9922102718029600960A7A /* HomeRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRootView.swift; sourceTree = "<group>"; };
+		0A9922122718029900960A7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0A9922152718029900960A7A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0ABE381627B2047D00733F78 /* CBFirstUseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBFirstUseView.swift; sourceTree = "<group>"; };
+		0ABE381927B20D0700733F78 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		0ABE381B27B227FE00733F78 /* CBHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBHomeView.swift; sourceTree = "<group>"; };
+		0AE6008C27BCC9FF005C7FC1 /* AssetsRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsRecords.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0A9922082718029600960A7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AB395BC27B3F984007982B4 /* SwiftUICharts in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A1FB15727C9C619005486CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0A6F387927C7AA8F006F60B5 /* AppDeploy.swift */,
+				0A6F386A27C22C1C006F60B5 /* RecordPalette.swift */,
+				0AE6008C27BCC9FF005C7FC1 /* AssetsRecords.swift */,
+				0A6F387227C3C669006F60B5 /* Keyboard.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0A1FB15827C9C63A005486CB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0A1FB15A27C9F747005486CB /* RecordDeploy.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0A1FB15927C9C775005486CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0ABE381627B2047D00733F78 /* CBFirstUseView.swift */,
+				0ABE381B27B227FE00733F78 /* CBHomeView.swift */,
+				0A7F9A1827BD4D88004FB2FF /* CBRecordView.swift */,
+				0A6F387B27C7C36E006F60B5 /* CommandButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		0A6F387427C66234006F60B5 /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				0A9922102718029600960A7A /* HomeRootView.swift */,
+				0A59CA8C271EBF7400199F53 /* SettingRootView.swift */,
+				0A59CA8A271EBC1300199F53 /* MainTab.swift */,
+				0A10C3CD27B81BE40073F359 /* CBTestPr.swift */,
+				0A6F387527C66272006F60B5 /* Animations.swift */,
+				0A6F387727C66542006F60B5 /* ButtonAnimation.swift */,
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		0A9922022718029600960A7A = {
+			isa = PBXGroup;
+			children = (
+				0A99220D2718029600960A7A /* CowBookkeeper */,
+				0A99220C2718029600960A7A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0A99220C2718029600960A7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A99220B2718029600960A7A /* Panda记账.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0A99220D2718029600960A7A /* CowBookkeeper */ = {
+			isa = PBXGroup;
+			children = (
+				0A99220E2718029600960A7A /* CowBookkeeperApp.swift */,
+				0A1FB15927C9C775005486CB /* Views */,
+				0A1FB15827C9C63A005486CB /* ViewModel */,
+				0A1FB15727C9C619005486CB /* Model */,
+				0A6F387427C66234006F60B5 /* Practice */,
+				0ABE381827B20CE400733F78 /* Extension */,
+				0A9922122718029900960A7A /* Assets.xcassets */,
+				0A9922142718029900960A7A /* Preview Content */,
+			);
+			path = CowBookkeeper;
+			sourceTree = "<group>";
+		};
+		0A9922142718029900960A7A /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				0A9922152718029900960A7A /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		0ABE381827B20CE400733F78 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0ABE381927B20D0700733F78 /* Color.swift */,
+				0A1FB15527C8F753005486CB /* Font.swift */,
+				0A6F386E27C3C56A006F60B5 /* View.swift */,
+				0A1FB15C27C9FC3A005486CB /* AppCommon.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0A99220A2718029600960A7A /* CowBookkeeper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0A9922192718029900960A7A /* Build configuration list for PBXNativeTarget "CowBookkeeper" */;
+			buildPhases = (
+				0A9922072718029600960A7A /* Sources */,
+				0A9922082718029600960A7A /* Frameworks */,
+				0A9922092718029600960A7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CowBookkeeper;
+			packageProductDependencies = (
+				0AB395BB27B3F984007982B4 /* SwiftUICharts */,
+			);
+			productName = CowBookkeeper;
+			productReference = 0A99220B2718029600960A7A /* Panda记账.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0A9922032718029600960A7A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					0A99220A2718029600960A7A = {
+						CreatedOnToolsVersion = 13.0;
+					};
+				};
+			};
+			buildConfigurationList = 0A9922062718029600960A7A /* Build configuration list for PBXProject "CowBookkeeper" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0A9922022718029600960A7A;
+			packageReferences = (
+				0AB395BA27B3F984007982B4 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
+			productRefGroup = 0A99220C2718029600960A7A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0A99220A2718029600960A7A /* CowBookkeeper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0A9922092718029600960A7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A9922162718029900960A7A /* Preview Assets.xcassets in Resources */,
+				0A9922132718029900960A7A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0A9922072718029600960A7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0ABE381727B2047D00733F78 /* CBFirstUseView.swift in Sources */,
+				0A6F387327C3C669006F60B5 /* Keyboard.swift in Sources */,
+				0A1FB15627C8F753005486CB /* Font.swift in Sources */,
+				0A6F387A27C7AA8F006F60B5 /* AppDeploy.swift in Sources */,
+				0A6F387827C66542006F60B5 /* ButtonAnimation.swift in Sources */,
+				0A1FB15B27C9F747005486CB /* RecordDeploy.swift in Sources */,
+				0A6F387627C66272006F60B5 /* Animations.swift in Sources */,
+				0A9922112718029600960A7A /* HomeRootView.swift in Sources */,
+				0A6F386F27C3C56A006F60B5 /* View.swift in Sources */,
+				0A6F387C27C7C36E006F60B5 /* CommandButton.swift in Sources */,
+				0A6F386B27C22C1C006F60B5 /* RecordPalette.swift in Sources */,
+				0A1FB15D27C9FC3A005486CB /* AppCommon.swift in Sources */,
+				0A59CA8D271EBF7400199F53 /* SettingRootView.swift in Sources */,
+				0A7F9A1927BD4D88004FB2FF /* CBRecordView.swift in Sources */,
+				0ABE381C27B227FF00733F78 /* CBHomeView.swift in Sources */,
+				0A10C3CE27B81BE40073F359 /* CBTestPr.swift in Sources */,
+				0A59CA8B271EBC1300199F53 /* MainTab.swift in Sources */,
+				0AE6008D27BCC9FF005C7FC1 /* AssetsRecords.swift in Sources */,
+				0A99220F2718029600960A7A /* CowBookkeeperApp.swift in Sources */,
+				0ABE381A27B20D0700733F78 /* Color.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0A9922172718029900960A7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0A9922182718029900960A7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0A99221A2718029900960A7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CowBookkeeper/Preview Content\"";
+				DEVELOPMENT_TEAM = 8R457AF97V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.cow.CowBookkeeper;
+				PRODUCT_NAME = "Panda记账";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0A99221B2718029900960A7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"CowBookkeeper/Preview Content\"";
+				DEVELOPMENT_TEAM = 8R457AF97V;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kevin.cow.CowBookkeeper;
+				PRODUCT_NAME = "Panda记账";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0A9922062718029600960A7A /* Build configuration list for PBXProject "CowBookkeeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A9922172718029900960A7A /* Debug */,
+				0A9922182718029900960A7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0A9922192718029900960A7A /* Build configuration list for PBXNativeTarget "CowBookkeeper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A99221A2718029900960A7A /* Debug */,
+				0A99221B2718029900960A7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0AB395BA27B3F984007982B4 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:AppPear/ChartView.git";
+			requirement = {
+				kind = exactVersion;
+				version = "2.0.0-beta.2";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0AB395BB27B3F984007982B4 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0AB395BA27B3F984007982B4 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 0A9922032718029600960A7A /* Project object */;
+}
