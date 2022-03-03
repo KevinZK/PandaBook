@@ -16,11 +16,22 @@ struct CBHomeView: View {
         NavigationView {
             ZStack {
                 ScrollView(.vertical) {
+                    NavigationLink(destination: CBTodayView()) {
+                        TodayWidgetOfHome()
+                            .padding(.top, 10)
+                    }
+                    HStack(spacing: 13) {
+                        
+                        
+                        NavigationLink(destination: CBDebtView()) {
+                            DebtViewOfHome()
+                        }
+                        NavigationLink(destination: CBPlanView()) {
+                            PlanViewOfHome()
+                        }
+                        
+                    }.padding(10)
                     
-                    TodayWidgetOfHome()
-                        .padding(.top, 10)
-                    DebtWidgetOfHome()
-                        .padding(.top, 10)
                     Text("最近账单")
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.leading, 15)
@@ -96,55 +107,59 @@ struct IconTitleWidget: View {
     }
 }
 
-struct DebtWidgetOfHome: View {
-    
+struct DebtViewOfHome: View {
     var body: some View {
-        HStack(spacing: 13) {
-            VStack(alignment: .leading) {
-                IconTitleWidget(iconName: AppModuleType.debt.symbols, titleName: AppModuleType.debt.title, iconBackgroundColor: AppModuleType.debt.bgColor, iconForegroundColor: .white, titleColor: .black, subTitle: AppModuleType.debt.subheadline)
-                    .padding(.top, 10)
-                Text("￥12760")
-                    .font(.custom("Helvetica Neue", size: 35))
-                    .bold()
-                    .foregroundColor(Color(hex: 0x2a9d8f))
-                    .padding(.leading,10)
-                    .padding(.top, -2)
-                Spacer()
-            }
-            .frame(width: ScreenW*0.45, height: 120)
-            .background(Color.white)
-            .cornerRadius(10)
-            .shadow(radius: 3)
-            VStack(alignment: .leading) {
-                IconTitleWidget(iconName: AppModuleType.plan.symbols, titleName: AppModuleType.plan.title, iconBackgroundColor: AppModuleType.plan.bgColor, iconForegroundColor: .white, titleColor: .black, subTitle: AppModuleType.plan.subheadline)
-                    .padding(.top, 10)
-                HStack(alignment:.firstTextBaseline) {
-                    Image(systemName:"chevron.compact.right")
-                        .font(.system(size: 20,weight: .bold))
-                        .foregroundColor(.blue)
-                        .padding(.leading, 10)
-                        .padding(.trailing,-5)
-                    Text("买车")
-                        .font(.title2)
-                        .padding(.top, 8)
-                    
-                    Spacer()
-                    Text("35万")
-                        .font(.title2)
-                        .padding(.trailing, 10)
-                }.padding(.top,-8)
-                ProgressView(value: 50.0, total: 100.0)
-                    .progressViewStyle(LinearProgressViewStyle(tint: .blue))
-                    .padding(.leading, 8)
-                    .padding(.trailing, 8)
-                    .padding(.top, -5)
-                Spacer()
-            }
-            .frame(width: ScreenW*0.45, height: 120)
-            .background(Color.white)
-            .cornerRadius(10)
-            .shadow(radius: 3)
+        VStack(alignment: .leading) {
+            IconTitleWidget(iconName: AppModuleType.debt.symbols, titleName: AppModuleType.debt.title, iconBackgroundColor: AppModuleType.debt.bgColor, iconForegroundColor: .white, titleColor: .black, subTitle: AppModuleType.debt.subheadline)
+                .padding(.top, 10)
+            Text("￥12760")
+                .font(.custom("Helvetica Neue", size: 35))
+                .bold()
+                .foregroundColor(Color(hex: 0x2a9d8f))
+                .padding(.leading,10)
+                .padding(.top, -2)
+            Spacer()
         }
+        .frame(width: ScreenW*0.45, height: 120)
+        .background(Color.white)
+        .cornerRadius(10)
+        .shadow(radius: 3)
+    }
+}
+
+struct PlanViewOfHome: View {
+    var body: some View {
+        VStack(alignment: .leading) {
+            IconTitleWidget(iconName: AppModuleType.plan.symbols, titleName: AppModuleType.plan.title, iconBackgroundColor: AppModuleType.plan.bgColor, iconForegroundColor: .white, titleColor: .black, subTitle: AppModuleType.plan.subheadline)
+                .padding(.top, 10)
+            HStack(alignment:.firstTextBaseline) {
+                Image(systemName:"chevron.compact.right")
+                    .font(.system(size: 20,weight: .bold))
+                    .foregroundColor(.blue)
+                    .padding(.leading, 10)
+                    .padding(.trailing,-5)
+                Text("买车")
+                    .font(.title2)
+                    .foregroundColor(.black)
+                    .padding(.top, 8)
+                
+                Spacer()
+                Text("35万")
+                    .font(.title2)
+                    .foregroundColor(.black)
+                    .padding(.trailing, 10)
+            }.padding(.top,-8)
+            ProgressView(value: 50.0, total: 100.0)
+                .progressViewStyle(LinearProgressViewStyle(tint: .blue))
+                .padding(.leading, 8)
+                .padding(.trailing, 8)
+                .padding(.top, -5)
+            Spacer()
+        }
+        .frame(width: ScreenW*0.45, height: 120)
+        .background(Color.white)
+        .cornerRadius(10)
+        .shadow(radius: 3)
     }
 }
 
@@ -214,7 +229,7 @@ struct TodayChartOfHome: View {
                 .padding(.leading,40)
                 .padding(.trailing, 50)
             
-//            Spacer()
+            Spacer()
             VStack(alignment: .trailing){
                 HStack{
                     Spacer()
@@ -224,6 +239,7 @@ struct TodayChartOfHome: View {
                     
                     Text("支出")
                         .font(Font.title3)
+                        .foregroundColor(.black)
                     
                 }
                 
@@ -232,6 +248,7 @@ struct TodayChartOfHome: View {
                     .font(.custom(FontFamily.SFT.rawValue, size: 20))
                     .bold()
                     .frame( maxWidth: 120)
+                    .foregroundColor(.black)
                     .lineLimit(1)
                     .multilineTextAlignment(.trailing)
                     .fixedSize()
@@ -245,11 +262,13 @@ struct TodayChartOfHome: View {
                     
                     Text("收入")
                         .font(Font.title3)
+                        .foregroundColor(.black)
                 }
                 Text("￥1999.1万")
                     .font(.custom(FontFamily.SFT.rawValue, size: 20))
                     .bold()
                     .frame( maxWidth: 120)
+                    .foregroundColor(.black)
                     .lineLimit(1)
                 
             }

@@ -11,6 +11,9 @@
 		0A1FB15627C8F753005486CB /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FB15527C8F753005486CB /* Font.swift */; };
 		0A1FB15B27C9F747005486CB /* RecordDeploy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FB15A27C9F747005486CB /* RecordDeploy.swift */; };
 		0A1FB15D27C9FC3A005486CB /* AppCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FB15C27C9FC3A005486CB /* AppCommon.swift */; };
+		0A1FB15F27CD1DA6005486CB /* CBDebtView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FB15E27CD1DA5005486CB /* CBDebtView.swift */; };
+		0A1FB16127CD1DBA005486CB /* CBPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FB16027CD1DBA005486CB /* CBPlanView.swift */; };
+		0A1FB16327CD1DF5005486CB /* CBTodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FB16227CD1DF5005486CB /* CBTodayView.swift */; };
 		0A59CA8B271EBC1300199F53 /* MainTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A59CA8A271EBC1300199F53 /* MainTab.swift */; };
 		0A59CA8D271EBF7400199F53 /* SettingRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A59CA8C271EBF7400199F53 /* SettingRootView.swift */; };
 		0A6F386B27C22C1C006F60B5 /* RecordPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F386A27C22C1C006F60B5 /* RecordPalette.swift */; };
@@ -37,6 +40,9 @@
 		0A1FB15527C8F753005486CB /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		0A1FB15A27C9F747005486CB /* RecordDeploy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDeploy.swift; sourceTree = "<group>"; };
 		0A1FB15C27C9FC3A005486CB /* AppCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCommon.swift; sourceTree = "<group>"; };
+		0A1FB15E27CD1DA5005486CB /* CBDebtView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBDebtView.swift; sourceTree = "<group>"; };
+		0A1FB16027CD1DBA005486CB /* CBPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBPlanView.swift; sourceTree = "<group>"; };
+		0A1FB16227CD1DF5005486CB /* CBTodayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBTodayView.swift; sourceTree = "<group>"; };
 		0A59CA8A271EBC1300199F53 /* MainTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTab.swift; sourceTree = "<group>"; };
 		0A59CA8C271EBF7400199F53 /* SettingRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingRootView.swift; sourceTree = "<group>"; };
 		0A6F386A27C22C1C006F60B5 /* RecordPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordPalette.swift; sourceTree = "<group>"; };
@@ -96,6 +102,9 @@
 				0ABE381B27B227FE00733F78 /* CBHomeView.swift */,
 				0A7F9A1827BD4D88004FB2FF /* CBRecordView.swift */,
 				0A6F387B27C7C36E006F60B5 /* CommandButton.swift */,
+				0A1FB15E27CD1DA5005486CB /* CBDebtView.swift */,
+				0A1FB16027CD1DBA005486CB /* CBPlanView.swift */,
+				0A1FB16227CD1DF5005486CB /* CBTodayView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -241,6 +250,7 @@
 			files = (
 				0ABE381727B2047D00733F78 /* CBFirstUseView.swift in Sources */,
 				0A6F387327C3C669006F60B5 /* Keyboard.swift in Sources */,
+				0A1FB16127CD1DBA005486CB /* CBPlanView.swift in Sources */,
 				0A1FB15627C8F753005486CB /* Font.swift in Sources */,
 				0A6F387A27C7AA8F006F60B5 /* AppDeploy.swift in Sources */,
 				0A6F387827C66542006F60B5 /* ButtonAnimation.swift in Sources */,
@@ -248,7 +258,9 @@
 				0A6F387627C66272006F60B5 /* Animations.swift in Sources */,
 				0A9922112718029600960A7A /* HomeRootView.swift in Sources */,
 				0A6F386F27C3C56A006F60B5 /* View.swift in Sources */,
+				0A1FB16327CD1DF5005486CB /* CBTodayView.swift in Sources */,
 				0A6F387C27C7C36E006F60B5 /* CommandButton.swift in Sources */,
+				0A1FB15F27CD1DA6005486CB /* CBDebtView.swift in Sources */,
 				0A6F386B27C22C1C006F60B5 /* RecordPalette.swift in Sources */,
 				0A1FB15D27C9FC3A005486CB /* AppCommon.swift in Sources */,
 				0A59CA8D271EBF7400199F53 /* SettingRootView.swift in Sources */,
