@@ -188,8 +188,9 @@ struct AssetsRecodsRowOfHome: View {
         VStack {
             HStack {
                 Image(systemName: "heart")
-                    .font(.system(size: 20))
-                    .padding(8)
+                    .frame(width: 24)
+                    .font(.system(size: 18))
+                    .padding(10)
                     .foregroundColor(.white)
                     .background(Color.blue)
                     .clipShape(Circle())

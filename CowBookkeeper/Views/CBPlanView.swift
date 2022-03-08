@@ -11,13 +11,12 @@ import SwiftUICharts
 struct CBPlanView: View {
     
     var body: some View {
-        NavigationView{
-            VStack{
-                Text("XXXX")
-                Spacer()
-            }
-            .navigationTitle(AppModuleType.plan.title)
+        VStack{
+            Text("XXXX")
+            Spacer()
         }
+        .navigationTitle(AppModuleType.plan.title)
+        
     }
 }
 

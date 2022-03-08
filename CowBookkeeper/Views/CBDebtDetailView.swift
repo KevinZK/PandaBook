@@ -1,72 +1,60 @@
 //
-//  CBDebtView.swift
+//  CBDebtDetailView.swift
 //  CowBookkeeper
 //
-//  Created by Zuo.Kevin on 2022/2/28.
+//  Created by Zuo.Kevin on 2022/3/7.
 //
 
 import SwiftUI
-import SwiftUICharts
 
-
-struct CBDebtView: View {
-    
-    @ObservedObject var viewModel: DebtDeploy = DebtDeploy()
+struct CBDebtDetailView: View {
+    var viewModel: DebtDeploy = DebtDeploy()
     
     var body: some View {
         
         List {
-            VStack {
-                Text("￥\(String(format: "%.1f", viewModel.totalAmout))")
-                    .font(.system(size: 50))
+            VStack(alignment: .center) {
+                WaveView(color: .blue, isReverse: true, radius: 60, progress: viewModel.progress)
+                Text("￥\(String(format: "%.1f", viewModel.amount))")
+                    .font(.system(size: 40))
                     .bold()
-                    .padding(.trailing, 40)
-                    .foregroundColor(.white)
-                Text("总" + AppModuleType.debt.title)
-                    .foregroundColor(.white)
             }
-            .frame(width: ScreenW*0.9, height: 120)
-            .background(Color(hex: 0x073B4C))
-            .cornerRadius(20)
+            .frame(width: ScreenW*0.9, height: 180)
             .listRowSeparator(.hidden)
             
-            Text("负债清单")
+            Text("偿还详情")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top,10)
                 .font(.system(size: 26, weight: .medium))
                 .listRowSeparator(.hidden)
             
-            ForEach(viewModel.debtDatas) { item in
-                DebtCell(model: item)
-                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
+            ForEach(viewModel.debtPayDatas) { item in
+                PayOrderCell(model: item)
+                    .swipeActions(edge: .trailing) {
                         Button(role: .destructive) {
-                            print("delete")
-                        } label: {
+                            print("删除")
+                            viewModel.delete(order: item)
+                        }label: {
                             Label("删除", systemImage: "trash")
                         }
                     }
                     .listRowSeparator(.hidden)
-                    .background(NavigationLink("", destination: CBDebtDetailView()).opacity(0))
-                    
             }
         }
+        .navigationTitle("详情")
         .listStyle(.plain)
-        .navigationTitle(AppModuleType.debt.title)
-        
     }
-    
 }
 
-struct CBDebtView_Previews: PreviewProvider {
+struct CBDebtDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        CBDebtView()
+        CBDebtDetailView(viewModel: DebtDeploy())
     }
 }
 
-
-struct DebtCell: View {
+struct PayOrderCell: View {
     
-    var model: DebtModel.DebtOrder
+    var model: DebtPayModel.DebtPayRecord
     var body: some View {
         
         VStack {
@@ -82,7 +70,7 @@ struct DebtCell: View {
                         Circle().stroke(.white, lineWidth: 1)
                     }
                     .shadow(radius: 3)
-                
+                    
                 VStack(alignment: .leading) {
                     Text(model.title)
                         .font(.title2)
@@ -91,9 +79,15 @@ struct DebtCell: View {
                         .foregroundColor(.gray)
                 }
                 Spacer()
-                Text("\(String(format: "%.1f", model.amount))￥")
-                Image(systemName: "chevron.right")
-                    .foregroundColor(.gray)
+                HStack {
+                    Image(systemName: model.type.rawValue)
+                        .foregroundColor(model.type.color)
+                    Text("\(String(format: "%.1f", model.amount))￥")
+                        .foregroundColor(model.type.color)
+                }
+                
+                
+                
                 
             }
             .padding(.top)
@@ -102,5 +96,3 @@ struct DebtCell: View {
         }
     }
 }
-
-

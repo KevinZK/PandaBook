@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0C1B7927D5F44A00CB4721 /* DebtDeploy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0C1B7827D5F44A00CB4721 /* DebtDeploy.swift */; };
+		0A0C1B7B27D5F47000CB4721 /* DebtModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0C1B7A27D5F47000CB4721 /* DebtModel.swift */; };
+		0A0C1B7D27D602B800CB4721 /* CBDebtDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0C1B7C27D602B800CB4721 /* CBDebtDetailView.swift */; };
+		0A0C1B7F27D602ED00CB4721 /* WaveProgressViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0C1B7E27D602ED00CB4721 /* WaveProgressViewView.swift */; };
+		0A0C1B8127D75D2D00CB4721 /* PlanDeploy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0C1B8027D75D2D00CB4721 /* PlanDeploy.swift */; };
+		0A0C1B8327D75D3A00CB4721 /* PlanModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0C1B8227D75D3A00CB4721 /* PlanModel.swift */; };
 		0A10C3CE27B81BE40073F359 /* CBTestPr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A10C3CD27B81BE40073F359 /* CBTestPr.swift */; };
 		0A1FB15627C8F753005486CB /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FB15527C8F753005486CB /* Font.swift */; };
 		0A1FB15B27C9F747005486CB /* RecordDeploy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A1FB15A27C9F747005486CB /* RecordDeploy.swift */; };
@@ -36,6 +42,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A0C1B7827D5F44A00CB4721 /* DebtDeploy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtDeploy.swift; sourceTree = "<group>"; };
+		0A0C1B7A27D5F47000CB4721 /* DebtModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebtModel.swift; sourceTree = "<group>"; };
+		0A0C1B7C27D602B800CB4721 /* CBDebtDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBDebtDetailView.swift; sourceTree = "<group>"; };
+		0A0C1B7E27D602ED00CB4721 /* WaveProgressViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveProgressViewView.swift; sourceTree = "<group>"; };
+		0A0C1B8027D75D2D00CB4721 /* PlanDeploy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanDeploy.swift; sourceTree = "<group>"; };
+		0A0C1B8227D75D3A00CB4721 /* PlanModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanModel.swift; sourceTree = "<group>"; };
 		0A10C3CD27B81BE40073F359 /* CBTestPr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBTestPr.swift; sourceTree = "<group>"; };
 		0A1FB15527C8F753005486CB /* Font.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Font.swift; sourceTree = "<group>"; };
 		0A1FB15A27C9F747005486CB /* RecordDeploy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDeploy.swift; sourceTree = "<group>"; };
@@ -82,6 +94,8 @@
 				0A6F387927C7AA8F006F60B5 /* AppDeploy.swift */,
 				0A6F386A27C22C1C006F60B5 /* RecordPalette.swift */,
 				0AE6008C27BCC9FF005C7FC1 /* AssetsRecords.swift */,
+				0A0C1B7A27D5F47000CB4721 /* DebtModel.swift */,
+				0A0C1B8227D75D3A00CB4721 /* PlanModel.swift */,
 				0A6F387227C3C669006F60B5 /* Keyboard.swift */,
 			);
 			path = Model;
@@ -91,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				0A1FB15A27C9F747005486CB /* RecordDeploy.swift */,
+				0A0C1B7827D5F44A00CB4721 /* DebtDeploy.swift */,
+				0A0C1B8027D75D2D00CB4721 /* PlanDeploy.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -102,7 +118,9 @@
 				0ABE381B27B227FE00733F78 /* CBHomeView.swift */,
 				0A7F9A1827BD4D88004FB2FF /* CBRecordView.swift */,
 				0A6F387B27C7C36E006F60B5 /* CommandButton.swift */,
+				0A0C1B7E27D602ED00CB4721 /* WaveProgressViewView.swift */,
 				0A1FB15E27CD1DA5005486CB /* CBDebtView.swift */,
+				0A0C1B7C27D602B800CB4721 /* CBDebtDetailView.swift */,
 				0A1FB16027CD1DBA005486CB /* CBPlanView.swift */,
 				0A1FB16227CD1DF5005486CB /* CBTodayView.swift */,
 			);
@@ -251,9 +269,13 @@
 				0ABE381727B2047D00733F78 /* CBFirstUseView.swift in Sources */,
 				0A6F387327C3C669006F60B5 /* Keyboard.swift in Sources */,
 				0A1FB16127CD1DBA005486CB /* CBPlanView.swift in Sources */,
+				0A0C1B8127D75D2D00CB4721 /* PlanDeploy.swift in Sources */,
+				0A0C1B7D27D602B800CB4721 /* CBDebtDetailView.swift in Sources */,
+				0A0C1B8327D75D3A00CB4721 /* PlanModel.swift in Sources */,
 				0A1FB15627C8F753005486CB /* Font.swift in Sources */,
 				0A6F387A27C7AA8F006F60B5 /* AppDeploy.swift in Sources */,
 				0A6F387827C66542006F60B5 /* ButtonAnimation.swift in Sources */,
+				0A0C1B7B27D5F47000CB4721 /* DebtModel.swift in Sources */,
 				0A1FB15B27C9F747005486CB /* RecordDeploy.swift in Sources */,
 				0A6F387627C66272006F60B5 /* Animations.swift in Sources */,
 				0A9922112718029600960A7A /* HomeRootView.swift in Sources */,
@@ -269,8 +291,10 @@
 				0A10C3CE27B81BE40073F359 /* CBTestPr.swift in Sources */,
 				0A59CA8B271EBC1300199F53 /* MainTab.swift in Sources */,
 				0AE6008D27BCC9FF005C7FC1 /* AssetsRecords.swift in Sources */,
+				0A0C1B7F27D602ED00CB4721 /* WaveProgressViewView.swift in Sources */,
 				0A99220F2718029600960A7A /* CowBookkeeperApp.swift in Sources */,
 				0ABE381A27B20D0700733F78 /* Color.swift in Sources */,
+				0A0C1B7927D5F44A00CB4721 /* DebtDeploy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
