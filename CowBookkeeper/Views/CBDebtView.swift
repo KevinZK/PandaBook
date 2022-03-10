@@ -37,17 +37,23 @@ struct CBDebtView: View {
                 .listRowSeparator(.hidden)
             
             ForEach(viewModel.debtDatas) { item in
-                DebtCell(model: item)
+                ProgressCell(symbol: item.symbol,
+                             bgColor: item.bgColor,
+                             title: item.title,
+                             date: "02/16/2022",
+                             totalAmount: item.totalAmount,
+                             currentAmount: item.currentAmount,
+                             progress: item.progress)
                     .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                         Button(role: .destructive) {
                             print("delete")
+                            viewModel.delete(order: item)
                         } label: {
                             Label("删除", systemImage: "trash")
                         }
                     }
                     .listRowSeparator(.hidden)
                     .background(NavigationLink("", destination: CBDebtDetailView()).opacity(0))
-                    
             }
         }
         .listStyle(.plain)
@@ -60,46 +66,6 @@ struct CBDebtView: View {
 struct CBDebtView_Previews: PreviewProvider {
     static var previews: some View {
         CBDebtView()
-    }
-}
-
-
-struct DebtCell: View {
-    
-    var model: DebtModel.DebtOrder
-    var body: some View {
-        
-        VStack {
-            HStack {
-                Image(systemName: model.symbol)
-                    .frame(width: 24)
-                    .font(.system(size: 18))
-                    .padding(10)
-                    .foregroundColor(.white)
-                    .background(Color(hex: model.bgColor))
-                    .clipShape(Circle())
-                    .overlay {
-                        Circle().stroke(.white, lineWidth: 1)
-                    }
-                    .shadow(radius: 3)
-                
-                VStack(alignment: .leading) {
-                    Text(model.title)
-                        .font(.title2)
-                    Text("02/16/2022")
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
-                }
-                Spacer()
-                Text("\(String(format: "%.1f", model.amount))￥")
-                Image(systemName: "chevron.right")
-                    .foregroundColor(.gray)
-                
-            }
-            .padding(.top)
-            .padding(.bottom)
-            Divider().padding(.leading).padding(.trailing)
-        }
     }
 }
 

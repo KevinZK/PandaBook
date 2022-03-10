@@ -29,8 +29,11 @@ struct DebtModel {
         var bgColor: Int
         var title: String
         var creatDate: Date
-        var amount: Double
-        var progress: CGFloat
+        var totalAmount: Double
+        var currentAmount: Double
+        var progress: CGFloat {
+            return currentAmount >= totalAmount ? 1.0 : currentAmount / totalAmount
+        }
     }
     
     
@@ -38,8 +41,11 @@ struct DebtModel {
 
 struct DebtPayModel {
     var debtPayLists: [DebtPayRecord]
-    var amount: Double
-    var progress: CGFloat
+    var totalAmount: Double
+    var currentAmount: Double
+    var progress: CGFloat{
+        return currentAmount >= totalAmount ? 1.0 : currentAmount / totalAmount
+    }
     
     private func filterIndex(_ item: DebtPayRecord) -> Int? {
         return debtPayLists.firstIndex(where: { $0.id == item.id })

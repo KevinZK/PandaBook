@@ -18,16 +18,16 @@ struct CBFirstUseView: View {
             Text("简单的\n方式管理\n你的Money")
                 .font(.system(size: 60, weight: .bold, design: .serif))
                 .padding(.top, 60)
-                
+            
             Button(action: {
                 print("开始记账")
             }){
                 HStack {
                     Text("开始")
                         .font(.system(size: 28, weight: .bold))
-                    .foregroundColor(Color.black)
-                    .frame(height: 30)
-                    .padding(20)
+                        .foregroundColor(Color.black)
+                        .frame(height: 30)
+                        .padding(20)
                     
                     Spacer()
                     
@@ -51,7 +51,7 @@ struct CBFirstUseView: View {
             .background(Color(hex: 0xFA6400,alpha: 0.58))
             .cornerRadius(20)
             .padding(.top, 50)
- 
+            
             
         }
         .padding(20)
@@ -63,7 +63,7 @@ struct CBFirstUseView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             CBFirstUseView()
-                
+            
         }
     }
 }

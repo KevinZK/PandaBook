@@ -48,11 +48,11 @@ struct WavePathView: View {
                 let offset = angle * size.width
                 
                 context.translateBy(x: isReverse ? -offset : offset, y: 0)
-                context.fill(path(size: size), with: .linearGradient(Gradient(colors: [.white, color]), startPoint: CGPoint(x: size.width/2, y: size.height), endPoint: CGPoint(x: size.width/2, y: 0.0)))
+                context.fill(path(size: size), with: .linearGradient(Gradient(colors: [.blue, color]), startPoint: CGPoint(x: size.width/2, y: size.height), endPoint: CGPoint(x: size.width/2, y: 0.0)))
                 context.translateBy(x: -size.width, y: 0)
-                context.fill(path(size: size), with: .linearGradient(Gradient(colors: [.white, color]), startPoint: CGPoint(x: size.width/2, y: size.height), endPoint: CGPoint(x: size.width/2, y: 0.0)))
+                context.fill(path(size: size), with: .linearGradient(Gradient(colors: [.blue, color]), startPoint: CGPoint(x: size.width/2, y: size.height), endPoint: CGPoint(x: size.width/2, y: 0.0)))
                 context.translateBy(x: size.width * 2, y: 0)
-                context.fill(path(size: size), with: .linearGradient(Gradient(colors: [.white, color]), startPoint: CGPoint(x: size.width/2, y: size.height), endPoint: CGPoint(x: size.width/2, y: 0.0)))
+                context.fill(path(size: size), with: .linearGradient(Gradient(colors: [.blue, color]), startPoint: CGPoint(x: size.width/2, y: size.height), endPoint: CGPoint(x: size.width/2, y: 0.0)))
                 
             }
             
