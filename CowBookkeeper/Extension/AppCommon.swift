@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import SwiftUI
+
+let dateFormatter = DateFormatter()
+
+let ScreenW = UIScreen.main.bounds.width

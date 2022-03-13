@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct CBTodayView: View {
+    
+    @State var selectedDate: Date = Date()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            CustomDatePicker(calendarType: .cell, outputDate: $selectedDate)
+                .onChange(of: selectedDate) { newValue in
+                    print(newValue.formatDate())
+                }
+//            CustomDatePicker(outputDate: $selectedDate)
+//                .onChange(of: selectedDate) { newValue in
+//                    print(newValue.formatDate())
+//                }
+        }
+        
     }
 }
 

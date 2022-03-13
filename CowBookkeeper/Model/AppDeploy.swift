@@ -71,7 +71,7 @@ extension AppModuleType: AppTheme {
     var subheadline: String {
         switch self {
         case .today:
-            return dateFormatter.string(from: Date())
+            return Date().formatDate()
         case .debt:
             return "Debt"
         case .plan:
@@ -81,12 +81,6 @@ extension AppModuleType: AppTheme {
         }
     }
     
-}
-
-var dateFormatter: DateFormatter {
-    let formatter = DateFormatter()
-    formatter.dateFormat = "YYYY/MM/dd"
-    return formatter
 }
 
 protocol RecordValue {
