@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-let ScreenW = UIScreen.main.bounds.width
+
 
 struct CBTestPr: View {
     @State private var progress: Double = 1.0

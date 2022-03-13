@@ -18,7 +18,7 @@ struct CBDebtView: View {
         List {
             VStack {
                 Text("￥\(String(format: "%.1f", viewModel.totalAmout))")
-                    .font(.system(size: 50))
+                    .font(.system(size: 40))
                     .bold()
                     .padding(.trailing, 40)
                     .foregroundColor(.white)
@@ -33,7 +33,7 @@ struct CBDebtView: View {
             Text("负债清单")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top,10)
-                .font(.system(size: 26, weight: .medium))
+                .font(.title.bold())
                 .listRowSeparator(.hidden)
             
             ForEach(viewModel.debtDatas) { item in

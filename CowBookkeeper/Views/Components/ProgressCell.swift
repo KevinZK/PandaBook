@@ -41,7 +41,7 @@ struct ProgressCell: View {
                         .foregroundColor(.gray)
                 }
                 Spacer()
-                Text("\(String(format: "%.1f", totalAmount))￥")
+                Text("\(totalAmount.formatterNumber)￥")
                 Image(systemName: "chevron.right")
                     .foregroundColor(.gray)
                 
@@ -106,7 +106,7 @@ struct OrderCell: View {
                 HStack {
                     Image(systemName: type.rawValue)
                         .foregroundColor(type.color)
-                    Text("\(String(format: "%.1f", amount))￥")
+                    Text("￥\(amount.formatterNumber)")
                         .foregroundColor(type.color)
                 }
                 

@@ -13,7 +13,7 @@ struct CBPlanDetailView: View {
         List {
             VStack(alignment: .center) {
                 WaveView(color: .blue, isReverse: true, radius: 60, progress: viewModel.progress)
-                Text("￥\(String(format: "%.1f", viewModel.amount))")
+                Text("￥\(viewModel.amount.formatterNumber)")
                     .font(.system(size: 40))
                     .bold()
             }
@@ -23,7 +23,7 @@ struct CBPlanDetailView: View {
             Text("进度详情")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top,10)
-                .font(.system(size: 26, weight: .medium))
+                .font(.title.bold())
                 .listRowSeparator(.hidden)
             
             ForEach(viewModel.planPayDatas) { item in
@@ -33,7 +33,7 @@ struct CBPlanDetailView: View {
                           date: "02/16/2022",
                           type: item.type,
                           amount: item.amount)
-                    .swipeActions(edge: .trailing) {
+                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                         Button(role: .destructive) {
                             print("删除")
                             viewModel.delete(order: item)
