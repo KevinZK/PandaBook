@@ -36,7 +36,7 @@ struct CBTodayView: View {
             
             ForEach(viewModel.dailyDatas) { item in
                 OrderCell(symbol: item.symbol, bgColor: item.bgColor, title: item.title, date: "02/16/2022", type: item.type, amount: item.amount)
-                    .swipeActions(edge: .trailing) {
+                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                         Button(role: .destructive) {
                             print("删除")
                             viewModel.delete(order: item)
@@ -60,9 +60,9 @@ struct CBTodayView_Previews: PreviewProvider {
 }
 
 struct ChartCellView: View {
-    var data: [Double] = [56.9, 39.0]
-    var expenses: Double = 53336.0
-    var revenue: Double = 39.0
+    var data: [Double]
+    var expenses: Double
+    var revenue: Double
     var body: some View {
         VStack {
             RingsChart()
@@ -80,7 +80,7 @@ struct ChartCellView: View {
                             .font(.subheadline)
                             .foregroundColor(.black)
                     }
-                    Text("￥\(String(format:"%.2f",expenses))万")
+                    Text("￥\(expenses.formatterNumber)")
                         .font(.headline)
                 }
                 
@@ -94,7 +94,7 @@ struct ChartCellView: View {
                             .font(.subheadline)
                             .foregroundColor(.black)
                     }
-                    Text("￥\(String(format:"%.2f",revenue))万")
+                    Text("￥\(revenue.formatterNumber)")
                         .font(.headline)
                     
                 }

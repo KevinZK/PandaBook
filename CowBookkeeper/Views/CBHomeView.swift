@@ -9,40 +9,44 @@ import SwiftUI
 import SwiftUICharts
 
 struct CBHomeView: View {
+    @ObservedObject var viewModel = HomeDeploy()
     
     var data = [1,2,3,4,5,6,7]
     var body: some View {
         
         NavigationView {
             ZStack {
-                ScrollView(.vertical) {
-                    NavigationLink(destination: CBTodayView()) {
-                        TodayWidgetOfHome()
-                            .padding(.top, 10)
+                List {
+                    
+                    TodayWidgetOfHome(daily: viewModel.dailyData )
+                        .background(NavigationLink("", destination: CBTodayView()).opacity(0))
+                        .listRowSeparator(.hidden)
+                    HStack(spacing: 10) {
+                        
+                        DebtViewOfHome(totalAmount: viewModel.debtData.totalAmout)
+                            .background(NavigationLink("", destination: CBDebtView()).opacity(0))
+                        
+                        PlanViewOfHome(plan: viewModel.planTopData)
+                            .background(NavigationLink("", destination: CBPlanView()).opacity(0))
+                        
                     }
-                    HStack(spacing: 13) {
-                        
-                        
-                        NavigationLink(destination: CBDebtView()) {
-                            DebtViewOfHome()
-                        }
-                        NavigationLink(destination: CBPlanView()) {
-                            PlanViewOfHome()
-                        }
-                        
-                    }.padding(10)
+                    .frame(width: ScreenW * 0.9)
+                    .listRowSeparator(.hidden)
+                    .padding(.top,10)
                     
                     Text("最近账单")
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.leading, 15)
                         .padding(.top,10)
-                        .font(.system(size: 26, weight: .medium))
-                    ForEach(data, id: \.self) { _ in
-                        AssetsRecodsRowOfHome()
+                        .font(.title.bold())
+                        .listRowSeparator(.hidden)
+                    ForEach(viewModel.latestDatas) { item in
+                        OrderCell(symbol: item.symbol, bgColor: item.bgColor, title: item.title, date: "2022/3/13", type: item.type, amount: item.amount)
+                            .listRowSeparator(.hidden)
                     }
                     
                     
                 }
+                .listStyle(.plain)
                 .navigationTitle("Panda 记账")
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
@@ -108,11 +112,13 @@ struct IconTitleWidget: View {
 }
 
 struct DebtViewOfHome: View {
+    var totalAmount: Double
+    
     var body: some View {
         VStack(alignment: .leading) {
             IconTitleWidget(iconName: AppModuleType.debt.symbols, titleName: AppModuleType.debt.title, iconBackgroundColor: AppModuleType.debt.bgColor, iconForegroundColor: .white, titleColor: .black, subTitle: AppModuleType.debt.subheadline)
                 .padding(.top, 10)
-            Text("￥12760")
+            Text("￥\(totalAmount.formatterNumber)")
                 .font(.custom("Helvetica Neue", size: 35))
                 .bold()
                 .foregroundColor(Color(hex: 0x2a9d8f))
@@ -128,6 +134,7 @@ struct DebtViewOfHome: View {
 }
 
 struct PlanViewOfHome: View {
+    var plan: PlanModel.PlanOrder
     var body: some View {
         VStack(alignment: .leading) {
             IconTitleWidget(iconName: AppModuleType.plan.symbols, titleName: AppModuleType.plan.title, iconBackgroundColor: AppModuleType.plan.bgColor, iconForegroundColor: .white, titleColor: .black, subTitle: AppModuleType.plan.subheadline)
@@ -138,18 +145,18 @@ struct PlanViewOfHome: View {
                     .foregroundColor(.blue)
                     .padding(.leading, 10)
                     .padding(.trailing,-5)
-                Text("买车")
+                Text(plan.title)
                     .font(.title2)
                     .foregroundColor(.black)
                     .padding(.top, 8)
                 
                 Spacer()
-                Text("35万")
-                    .font(.title2)
+                Text("\(plan.totalAmount.formatterNumber)")
+                    .font(.headline)
                     .foregroundColor(.black)
                     .padding(.trailing, 10)
             }.padding(.top,-8)
-            ProgressView(value: 50.0, total: 100.0)
+            ProgressView(value: plan.currentAmount , total: plan.totalAmount)
                 .progressViewStyle(LinearProgressViewStyle(tint: .blue))
                 .padding(.leading, 8)
                 .padding(.trailing, 8)
@@ -165,6 +172,7 @@ struct PlanViewOfHome: View {
 
 
 struct TodayWidgetOfHome: View {
+    var daily: DailyModel
     var body: some View {
         VStack(alignment: .leading) {
             IconTitleWidget(iconName: AppModuleType.today.symbols, titleName: AppModuleType.today.title, iconBackgroundColor: AppModuleType.today.bgColor, iconForegroundColor: Color.white, titleColor: Color.black, subTitle: AppModuleType.today.subheadline)
@@ -172,51 +180,13 @@ struct TodayWidgetOfHome: View {
                 .padding(.top, 10)
                 .padding(.leading, 4)
             
-            TodayChartOfHome(data: [36.0, 56.0], expenses: 12.9, revenue: 113)
+            TodayChartOfHome(data: [daily.expenses, daily.revenue], expenses: daily.expenses, revenue: daily.revenue)
         }
-        .frame(width: ScreenW*0.93, height: 220)
+        .frame(width: ScreenW*0.9, height: 220)
         .background(Color.white)
         .cornerRadius(10)
         .shadow(radius: 3)
         
-    }
-}
-
-struct AssetsRecodsRowOfHome: View {
-    var body: some View {
-        
-        VStack {
-            HStack {
-                Image(systemName: "heart")
-                    .frame(width: 24)
-                    .font(.system(size: 18))
-                    .padding(10)
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .clipShape(Circle())
-                    .overlay {
-                        Circle().stroke(.white, lineWidth: 1)
-                    }
-                    .shadow(radius: 3)
-                
-                VStack(alignment: .leading) {
-                    Text("宠物猫粮")
-                        .font(.title2)
-                    Text("02/16/2022")
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
-                }
-                Spacer()
-                
-                Text("345.9￥")
-            }
-            .padding(.leading)
-            .padding(.trailing)
-            
-            
-            Divider().padding(.leading).padding(.trailing)
-        }
-        .frame(height: 64)
     }
 }
 
@@ -248,7 +218,7 @@ struct TodayChartOfHome: View {
                 }
                 
                 
-                Text("￥\(String(format:"%.2f",expenses))万")
+                Text("￥\(expenses.formatterNumber)")
                     .font(.custom(FontFamily.SFT.rawValue, size: 20))
                     .bold()
                     .frame( maxWidth: 120)
@@ -268,12 +238,14 @@ struct TodayChartOfHome: View {
                         .font(Font.title3)
                         .foregroundColor(.black)
                 }
-                Text("￥\(String(format:"%.2f",revenue))万")
+                Text("￥\(revenue.formatterNumber)")
                     .font(.custom(FontFamily.SFT.rawValue, size: 20))
                     .bold()
                     .frame( maxWidth: 120)
                     .foregroundColor(.black)
                     .lineLimit(1)
+                    .multilineTextAlignment(.trailing)
+                    .fixedSize()
                 
             }
             

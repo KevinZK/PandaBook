@@ -35,7 +35,7 @@ struct CBDebtDetailView: View {
                           date: "02/16/2022",
                           type: item.type,
                           amount: item.amount)
-                    .swipeActions(edge: .trailing) {
+                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                         Button(role: .destructive) {
                             print("删除")
                             viewModel.delete(order: item)

@@ -13,7 +13,7 @@ struct CBPlanDetailView: View {
         List {
             VStack(alignment: .center) {
                 WaveView(color: .blue, isReverse: true, radius: 60, progress: viewModel.progress)
-                Text("￥\(String(format: "%.1f", viewModel.amount))")
+                Text("￥\(viewModel.amount.formatterNumber)")
                     .font(.system(size: 40))
                     .bold()
             }
@@ -33,7 +33,7 @@ struct CBPlanDetailView: View {
                           date: "02/16/2022",
                           type: item.type,
                           amount: item.amount)
-                    .swipeActions(edge: .trailing) {
+                    .swipeActions(edge: .trailing, allowsFullSwipe: false) {
                         Button(role: .destructive) {
                             print("删除")
                             viewModel.delete(order: item)

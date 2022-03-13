@@ -18,7 +18,7 @@ struct CBDebtView: View {
         List {
             VStack {
                 Text("￥\(String(format: "%.1f", viewModel.totalAmout))")
-                    .font(.system(size: 50))
+                    .font(.system(size: 40))
                     .bold()
                     .padding(.trailing, 40)
                     .foregroundColor(.white)

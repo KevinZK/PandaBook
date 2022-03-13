@@ -14,8 +14,8 @@ enum CurrencySymbolsType: String {
 }
 
 enum RecordsType: String {
-    case revenue = "plus.circle"
-    case expenses = "minus.circle"
+    case revenue = "plus"
+    case expenses = "minus"
     
     var color: Color {
         switch self {
