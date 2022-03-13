@@ -25,7 +25,7 @@ struct CBDebtDetailView: View {
             Text("偿还详情")
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.top,10)
-                .font(.system(size: 26, weight: .medium))
+                .font(.title.bold())
                 .listRowSeparator(.hidden)
             
             ForEach(viewModel.debtPayDatas) { item in

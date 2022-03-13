@@ -9,7 +9,7 @@ import SwiftUI
 
 enum CalendarType {
     case `default`
-    case cell
+    case extendable
 }
 
 struct CustomDatePicker: View {
@@ -33,6 +33,8 @@ struct CustomDatePicker: View {
     
     @Binding var outputDate: Date
     
+    @State var isExpand: Bool = false
+    
     var action: ()->() = {}
     
     let days: [String] = ["日", "一", "二", "三", "四", "五", "六"]
@@ -41,64 +43,85 @@ struct CustomDatePicker: View {
         Group {
             switch calendarType {
             case .default: defaultCalendar
-            case .cell: cellCalendar
+            case .extendable: cellCalendar
             }
         }
         
     }
     
     var cellCalendar: some View {
-        HStack(alignment: .center){
-            Button{
-                withAnimation {
-                    currentDay -= 1
-                    action()
+        
+        VStack {
+            HStack(alignment: .center){
+                Button{
+                    withAnimation {
+                        currentDay -= 1
+                        action()
+                    }
+                } label: {
+                    Image(systemName: "chevron.left")
+                        .font(.title2)
+                        .foregroundColor(.pink)
+                        .padding(.vertical,6)
+                        .padding(.horizontal,10)
+                        .background(.pink.opacity(0.1))
+                        .cornerRadius(6)
                 }
-            } label: {
-                Image(systemName: "chevron.left")
-                    .font(.title2)
-                    .foregroundColor(.pink)
-                    .padding(.vertical,6)
-                    .padding(.horizontal,10)
-                    .background(.pink.opacity(0.1))
-                    .cornerRadius(6)
+                .buttonStyle(StaticButtonStyle())
+                Spacer()
+                VStack {
+                    Text(selectedDate.date.formatDate(dateFormat: "YYYY年MM月"))
+                        .font(.footnote)
+                        .foregroundColor(.black.opacity(0.6))
+                        .fontWeight(.semibold)
+                        .padding(6)
+                        .background(.gray.opacity(0.1))
+                        .cornerRadius(4)
+                        
+                    Text(selectedDate.date.formatDate(dateFormat: "dd"))
+                        .font(.title.bold())
+                        .foregroundColor(.pink)
+                        .padding(.top, -8)
+                }
+                .onTapGesture {
+                    isExpand.toggle()
+                }
+                
+                Spacer()
+                Button{
+                    withAnimation {
+                        currentDay += 1
+                        action()
+                    }
+                } label: {
+                    Image(systemName: "chevron.right")
+                        .font(.title2)
+                        .foregroundColor(.pink)
+                        .padding(.vertical,6)
+                        .padding(.horizontal,10)
+                        .background(.pink.opacity(0.1))
+                        .cornerRadius(6)
+                }
+                .buttonStyle(StaticButtonStyle())
             }
-            Spacer()
-            VStack {
-                Text(selectedDate.date.formatDate(dateFormat: "YYYY年MM月"))
-                    .font(.footnote)
-                    .foregroundColor(.black.opacity(0.6))
-                    .fontWeight(.semibold)
-                    .padding(6)
-                    .background(.gray.opacity(0.1))
-                    .cornerRadius(4)
-                    
-                Text(selectedDate.date.formatDate(dateFormat: "dd"))
-                    .font(.title.bold())
-                    .foregroundColor(.pink)
-                    .padding(.top, -8)
+            .background(.white)
+            .padding(.horizontal)
+            .onChange(of: currentDay) { newValue in
+                selectedDate = DateValue(date: getCurrentDay())
             }
             
-            Spacer()
-            Button{
-                withAnimation {
-                    currentDay += 1
-                    action()
+            Group {
+                if isExpand {
+                    defaultCalendar
+                        .animation(.easeInOut, value: isExpand)
+                        
                 }
-            } label: {
-                Image(systemName: "chevron.right")
-                    .font(.title2)
-                    .foregroundColor(.pink)
-                    .padding(.vertical,6)
-                    .padding(.horizontal,10)
-                    .background(.pink.opacity(0.1))
-                    .cornerRadius(6)
             }
+            
         }
-        .padding(.horizontal)
-        .onChange(of: currentDay) { newValue in
-            selectedDate = DateValue(date: getCurrentDay())
-        }
+        
+        
+        
     }
     
     var defaultCalendar: some View {
@@ -126,6 +149,7 @@ struct CustomDatePicker: View {
                         .cornerRadius(6)
                         
                 }
+                .buttonStyle(StaticButtonStyle())
                 
                 Button{
                     withAnimation {
@@ -140,6 +164,7 @@ struct CustomDatePicker: View {
                         .background(.pink.opacity(0.1))
                         .cornerRadius(6)
                 }
+                .buttonStyle(StaticButtonStyle())
                 
             }
             .padding(.horizontal)
@@ -167,6 +192,7 @@ struct CustomDatePicker: View {
                                 .opacity(isSameDay(date1: selectedDate.date, date2: value.date) ? 1: 0)
                         )
                         .onTapGesture {
+                            currentDay = 0
                             startDate = value.date
                             selectedDate.date = value.date
                         }
@@ -186,7 +212,9 @@ struct CustomDatePicker: View {
                     .font(.headline)
                 Spacer()
             }
+            .padding(.horizontal)
             Button{
+                isExpand.toggle()
                 action()
             }label: {
                 Text("确定")
@@ -196,6 +224,7 @@ struct CustomDatePicker: View {
                     .frame(height: 48)
                     .background(.pink, in: Capsule())
             }
+            .buttonStyle(StaticButtonStyle())
             .padding(.horizontal)
 
             Spacer()
@@ -259,7 +288,7 @@ extension CustomDatePicker {
     
     func getCurrentDay() -> Date {
         let calendar = Calendar.current
-        guard let currentDay = calendar.date(byAdding: .day, value: self.currentDay, to: Date()) else { return Date() }
+        guard let currentDay = calendar.date(byAdding: .day, value: self.currentDay, to: startDate) else { return Date() }
         return currentDay
     }
     

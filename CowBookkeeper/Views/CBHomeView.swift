@@ -172,7 +172,7 @@ struct TodayWidgetOfHome: View {
                 .padding(.top, 10)
                 .padding(.leading, 4)
             
-            TodayChartOfHome()
+            TodayChartOfHome(data: [36.0, 56.0], expenses: 12.9, revenue: 113)
         }
         .frame(width: ScreenW*0.93, height: 220)
         .background(Color.white)
@@ -221,10 +221,13 @@ struct AssetsRecodsRowOfHome: View {
 }
 
 struct TodayChartOfHome: View {
+    var data: [Double]
+    var expenses: Double
+    var revenue: Double
     var body: some View {
         HStack{
             RingsChart()
-                .data([34.0, 56.0])
+                .data(data)
                 .chartStyle(ChartStyle(backgroundColor: Color(hex: 0xf8f9fa),foregroundColor: [ColorGradient( Color(hex: 0x92FFDE),.green),ColorGradient(.orange,.red)]))
                 .frame(width: 120, height: 120)
                 .padding(.leading,40)
@@ -245,7 +248,7 @@ struct TodayChartOfHome: View {
                 }
                 
                 
-                Text("￥633.84万")
+                Text("￥\(String(format:"%.2f",expenses))万")
                     .font(.custom(FontFamily.SFT.rawValue, size: 20))
                     .bold()
                     .frame( maxWidth: 120)
@@ -265,7 +268,7 @@ struct TodayChartOfHome: View {
                         .font(Font.title3)
                         .foregroundColor(.black)
                 }
-                Text("￥1999.1万")
+                Text("￥\(String(format:"%.2f",revenue))万")
                     .font(.custom(FontFamily.SFT.rawValue, size: 20))
                     .bold()
                     .frame( maxWidth: 120)

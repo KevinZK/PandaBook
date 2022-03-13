@@ -33,6 +33,8 @@
 		0A7587C127DA104500ADC0BC /* ProgressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7587C027DA104500ADC0BC /* ProgressCell.swift */; };
 		0A7587C427DB4E6100ADC0BC /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7587C327DB4E6100ADC0BC /* CustomDatePicker.swift */; };
 		0A7587C627DDAE6300ADC0BC /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7587C527DDAE6300ADC0BC /* Date.swift */; };
+		0A7587C827DDF3EE00ADC0BC /* DailyDeploy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7587C727DDF3EE00ADC0BC /* DailyDeploy.swift */; };
+		0A7587CA27DDF41300ADC0BC /* DailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7587C927DDF41300ADC0BC /* DailyModel.swift */; };
 		0A7F9A1927BD4D88004FB2FF /* CBRecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A7F9A1827BD4D88004FB2FF /* CBRecordView.swift */; };
 		0A99220F2718029600960A7A /* CowBookkeeperApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A99220E2718029600960A7A /* CowBookkeeperApp.swift */; };
 		0A9922112718029600960A7A /* HomeRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9922102718029600960A7A /* HomeRootView.swift */; };
@@ -72,6 +74,8 @@
 		0A7587C027DA104500ADC0BC /* ProgressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCell.swift; sourceTree = "<group>"; };
 		0A7587C327DB4E6100ADC0BC /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		0A7587C527DDAE6300ADC0BC /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		0A7587C727DDF3EE00ADC0BC /* DailyDeploy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyDeploy.swift; sourceTree = "<group>"; };
+		0A7587C927DDF41300ADC0BC /* DailyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModel.swift; sourceTree = "<group>"; };
 		0A7F9A1827BD4D88004FB2FF /* CBRecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBRecordView.swift; sourceTree = "<group>"; };
 		0A99220B2718029600960A7A /* Panda记账.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Panda记账.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A99220E2718029600960A7A /* CowBookkeeperApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CowBookkeeperApp.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				0AE6008C27BCC9FF005C7FC1 /* AssetsRecords.swift */,
 				0A0C1B7A27D5F47000CB4721 /* DebtModel.swift */,
 				0A0C1B8227D75D3A00CB4721 /* PlanModel.swift */,
+				0A7587C927DDF41300ADC0BC /* DailyModel.swift */,
 				0A6F387227C3C669006F60B5 /* Keyboard.swift */,
 			);
 			path = Model;
@@ -115,6 +120,7 @@
 				0A1FB15A27C9F747005486CB /* RecordDeploy.swift */,
 				0A0C1B7827D5F44A00CB4721 /* DebtDeploy.swift */,
 				0A0C1B8027D75D2D00CB4721 /* PlanDeploy.swift */,
+				0A7587C727DDF3EE00ADC0BC /* DailyDeploy.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -298,11 +304,13 @@
 				0A6F387A27C7AA8F006F60B5 /* AppDeploy.swift in Sources */,
 				0A6F387827C66542006F60B5 /* ButtonAnimation.swift in Sources */,
 				0A0C1B7B27D5F47000CB4721 /* DebtModel.swift in Sources */,
+				0A7587C827DDF3EE00ADC0BC /* DailyDeploy.swift in Sources */,
 				0A1FB15B27C9F747005486CB /* RecordDeploy.swift in Sources */,
 				0A6F5E9F27D9CB7800815494 /* CBPlanDetailView.swift in Sources */,
 				0A6F387627C66272006F60B5 /* Animations.swift in Sources */,
 				0A9922112718029600960A7A /* HomeRootView.swift in Sources */,
 				0A6F386F27C3C56A006F60B5 /* View.swift in Sources */,
+				0A7587CA27DDF41300ADC0BC /* DailyModel.swift in Sources */,
 				0A1FB16327CD1DF5005486CB /* CBTodayView.swift in Sources */,
 				0A6F387C27C7C36E006F60B5 /* CommandButton.swift in Sources */,
 				0A7587C627DDAE6300ADC0BC /* Date.swift in Sources */,
